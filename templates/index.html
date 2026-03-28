@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titanic Survival Prediction</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: url("https://upload.wikimedia.org/wikipedia/commons/f/fd/RMS_Titanic_3.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 50px;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: gold;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    form {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 30px;
+        border-radius: 15px;
+        display: inline-block;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #ffd700;
+    }
+
+    input {
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        width: 200px;
+        text-align: center;
+    }
+
+    button {
+        background: gold;
+        color: black;
+        font-weight: bold;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ffcc00;
+        transform: scale(1.05);
+    }
+
+    h3 {
+        margin-top: 20px;
+        font-size: 1.8em;
+        color: #00ffcc;
+    }
+</style>
+
+</head>
+<body>
+    <h2>Titanic Survival Prediction</h2>
+    <form action="/predict" method="post">
+        <label>Pclass:</label><input type="number" name="Pclass" required><br>
+        <label>Sex (0=Female, 1=Male):</label><input type="number" name="Sex" required><br>
+        <label>Age:</label><input type="text" name="Age" required><br>
+        <label>SibSp:</label><input type="number" name="SibSp" required><br>
+        <label>Parch:</label><input type="number" name="Parch" required><br>
+        <label>Fare:</label><input type="text" name="Fare" required><br>
+        <label>Embarked (0=C, 1=Q, 2=S):</label><input type="number" name="Embarked" required><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
