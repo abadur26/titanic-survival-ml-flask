@@ -9,8 +9,7 @@
 
 This project demonstrates a complete **end-to-end Machine Learning pipeline** — from data exploration and model training to deployment as a user-friendly web app using **Flask**.
 
-![Titanic Survival Predictor Demo](https://via.placeholder.com/800x400?text=Titanic+Survival+Web+App+Demo)  
-*(Add a real screenshot/GIF here after you take one)*
+![Capture](https://github.com/user-attachments/assets/54e74298-7729-4dd7-bd98-1dd4aca6c628)
 
 ## ✨ Features
 
